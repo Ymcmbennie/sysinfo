@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://bootswatch.com/4/cyborg/bootstrap.min.css">
+    <title>BensonAD App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Benson AD</h1>
+        <div id="output">
+
+        </div>
+    </div>
+</body>
+<script>
+    var numeral = require('numeral');
+    console.log(process);
+    let output = `
+        <h4 class="page-header">App version Data</h4>
+        <ul class="list=group">
+            <li class="list-group-item">Node: ${process.versions.node}</li>
+            <li class="list-group-item">Chrome: ${process.versions.chrome}</li>
+            <li class="list-group-item">Electron: ${process.versions.electron}</li>
+        </ul>
+        <h4 class="page-header">System Specs</h4>
+        <ul class="list=group">
+            <li class="list-group-item">System Architecture: ${process.arch} bits</li>
+            <li class="list-group-item">System User: ${process.env.USERNAME}</li>
+            <li class="list-group-item">Computer Name: ${process.env.COMPUTERNAME}</li>
+        </ul>
+        <h4 class="page-header">System Memory</h4>
+        <ul class="list=group">
+            <li class="list-group-item">Total: ${process.getSystemMemoryInfo().total}</li>
+            <li class="list-group-item">Free: ${process.getSystemMemoryInfo().free}</li>
+            <li class="list-group-item">Swap Total: ${process.getSystemMemoryInfo().swapTotal}</li>
+            <li class="list-group-item">Swap Free: ${process.getSystemMemoryInfo().swapFree}</li>
+        </ul>
+        
+
+    `;
+
+    document.getElementById('output').innerHTML = output;
+</script>
+<script>
+    require('./renderer.js');
+</script>
+</html>

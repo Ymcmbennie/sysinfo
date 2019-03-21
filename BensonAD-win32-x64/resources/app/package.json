@@ -1,0 +1,21 @@
+{
+  "name": "sysinfoapp",
+  "version": "1.0.0",
+  "description": "Simple system monitor",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "package": "",
+    "build": "electron-packager . BensonAD"
+  },
+  "author": "Benson Sanga",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^4.1.1",
+    "numeral": "^2.0.6"
+  },
+  "devDependencies": {
+    "asar": "^1.0.0",
+    "electron-packager": "^13.1.1"
+  }
+}
